@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="TrangTinTucDonGian.Home" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Trang Tin Tuc</title>
+    <link href="Themes/style.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="Home" runat="server">
+        <div id="menutop">
+            <div id="menu">
+                <ul>
+                    <li><a href="index.aspx">Trang Chủ</a></li>
+                    <asp:Repeater ID="rpDanhMuc" runat="server" DataSourceID="SqlDataSource1">
+                        <ItemTemplate>
+                            <li><a href="#"><%# Eval("title") %></a></li>
+                        </ItemTemplate>
+                    </asp:Repeater>
+
+                    <% 
+                        if ((Boolean)Session["admin"] == false)
+                        { %>
+                    <li><a href="DangNhap.aspx">Đăng nhập</a></li>
+                    <li><a href="DangKi.aspx">Đăng kí</a></li>
+                    <% }
+                        else
+                        {%>
+                    <li><a href="Logout.aspx">Thoát</a></li>
+                    <%}
+                    %>
+                </ul>
+            </div>
+        </div>
+        <div id="maincontent">
+            <div id="rightcontent">
+                <h1>Tiêu đề phải</h1>
+                <div id="ndright">
+                    Noi dung ben phai
+                </div>
+            </div>
+            <div id="content">
+
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+
+            </div>
+        </div>
+        <div id="footer">
+            <div id="ndfooter">
+                CopyRight: Nguyen Van Kien , Dao Manh Cuong, Nghiem The Chien.
+                <br />
+                Project PRN292 : Trang Tin Tuc Don Gian
+
+            </div>
+        </div>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TrangTinTucConnectionString %>" SelectCommand="SELECT [title] FROM [tblCategory]"></asp:SqlDataSource>
+    </form>
+</body>
+</html>
