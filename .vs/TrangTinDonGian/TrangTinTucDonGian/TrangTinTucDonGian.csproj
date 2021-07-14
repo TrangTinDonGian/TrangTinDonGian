@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\AdminHome.aspx" />
+    <Content Include="ChiTiet.aspx" />
     <Content Include="DangKi.aspx" />
     <Content Include="DangNhap.aspx" />
     <Content Include="Global.asax" />
@@ -78,6 +79,13 @@
     </Compile>
     <Compile Include="Admin\AdminHome.aspx.designer.cs">
       <DependentUpon>AdminHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTiet.aspx.cs">
+      <DependentUpon>ChiTiet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChiTiet.aspx.designer.cs">
+      <DependentUpon>ChiTiet.aspx</DependentUpon>
     </Compile>
     <Compile Include="DangKi.aspx.cs">
       <DependentUpon>DangKi.aspx</DependentUpon>

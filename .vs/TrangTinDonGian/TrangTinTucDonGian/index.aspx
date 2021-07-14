@@ -3,8 +3,17 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1>Tiêu đề nd chinh</h1>
+    <h1>Tin mới nhất</h1>
     <div id="ndcontent">
-        Noi dung website se hien thi o day
+        <asp:Repeater ID="rpNews" runat="server" DataSourceID="SqlDataSource1">
+            <ItemTemplate>
+                <ul>
+                    <li>
+                        <a href="ChiTiet.aspx?categoryid=<%# Eval("category_ID") %>&id=<%# Eval("news_ID") %>"><%# Eval("title")%> </a>
+                    </li>
+                </ul>
+            </ItemTemplate>
+        </asp:Repeater>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TrangTinTucConnectionString %>" SelectCommand="SELECT top 15 * FROM [tblNews] order by date desc"></asp:SqlDataSource>
     </div>
 </asp:Content>

@@ -22,13 +22,14 @@
                     </asp:Repeater>
 
                     <% 
-                        if ((Boolean)Session["admin"] == false)
+                        if ((Boolean)Session["login"] == false)
                         { %>
                     <li><a href="DangNhap.aspx">Đăng nhập</a></li>
                     <li><a href="DangKi.aspx">Đăng kí</a></li>
                     <% }
                         else
                         {%>
+                    <li><a>Xin chào</a></li>
                     <li><a href="Logout.aspx">Thoát</a></li>
                     <%}
                     %>

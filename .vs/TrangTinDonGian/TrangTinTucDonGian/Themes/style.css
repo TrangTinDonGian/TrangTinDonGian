@@ -3,10 +3,11 @@
     padding: 0;
     font-family: Verdana;
     font-size: 80%;
-    background: #9bccd2;
+    background: #fff;
 }
 
 #menutop {
+    height: 30px;
     background: #000;
     position: fixed;
     width: 100%;
@@ -17,7 +18,7 @@
 }
 
 #menu {
-    width: 100%;
+    width: 1000px;
     margin: 0 auto;
     padding: 0;
 }
@@ -49,7 +50,7 @@
         }
 
 #maincontent {
-    width: 100%;
+    width: 1000px;
     margin: 30px auto;
 }
 
@@ -85,6 +86,21 @@
     text-align: justify;
 }
 
+    #ndcontent ul {
+        margin: 20px 15px 20px 10px;
+    }
+
+        #ndcontent ul li a {
+            color: #033b5f;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+            #ndcontent ul li a:hover {
+                color: #6f0322;
+                text-decoration: underline;
+            }
+
 #content h1 {
     margin: 0;
     padding: 5px 10px;
@@ -109,8 +125,9 @@
     width: 1000px;
     margin: 0 auto;
 }
+
 #ndfooter {
     color: #fff;
     padding: 15px;
-    text-align:center
+    text-align: center
 }
