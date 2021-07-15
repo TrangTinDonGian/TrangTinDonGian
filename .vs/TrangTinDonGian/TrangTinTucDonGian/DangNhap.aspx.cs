@@ -32,8 +32,11 @@ namespace TrangTinTucDonGian
                     if (dt.Rows.Count > 0)
                     {
                         //login thanh cong
+                        Session["login"] = true;
+                        Session["username"] = dt.Rows[0]["username"].ToString();
+                        Session["user_ID"] = dt.Rows[0]["user_ID"].ToString();
                         //power = 0 chuyen ve trang AdminHome.aspx
-                        Session["admin"] = true;
+                        //if        
                         Response.Redirect("index.aspx");
                         //power = 1 chuyen ve trang ModHome.aspx
                         //power = 2 chuyen ve trang index.aspx

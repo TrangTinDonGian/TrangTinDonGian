@@ -17,7 +17,9 @@ namespace TrangTinTucDonGian
 
         protected void Session_Start(object sender, EventArgs e)
         {
-            Session["admin"] = false;
+            Session["login"] = false;
+            Session["username"] = "";
+            Session["user_id"] = 0;
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)

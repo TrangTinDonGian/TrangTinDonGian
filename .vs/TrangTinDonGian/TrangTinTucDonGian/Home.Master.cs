@@ -15,24 +15,16 @@ namespace TrangTinTucDonGian
         {
             if (!IsPostBack)
             {
-               // showDanhMuc();
+                lblUsername.Text = Session["username"].ToString();
             }
         }
-
-        void showDanhMuc() {
-            DataTable dt = new DataTable();
-            try
+            protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (!txtSearch.Text.Equals(""))
             {
-                string strSelect = "SELECT title FROM tblCategory";
-                dt = new DataProvider().excuteQuery(strSelect);
-                rpDanhMuc.DataSource = dt;
-                rpDanhMuc.DataBind();
+                Response.Redirect("Search.aspx?txt=" + txtSearch.Text);
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine("load grid error: " + ex.Message);
-            }
-
+           
         }
     }
 }

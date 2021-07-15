@@ -32,5 +32,18 @@ namespace TrangTinTucDonGian
             }
 
         }
+
+        protected void btnComment_Click(object sender, EventArgs e)
+        {
+            
+            if (!(Boolean)Session["login"])
+            {
+                Response.Redirect("DangNhap.aspx");
+            }
+            else
+            {
+                
+            }
+        }
     }
 }

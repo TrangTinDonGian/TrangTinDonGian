@@ -7,14 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace TrangTinTucDonGian
 {
-    public partial class Logout : System.Web.UI.Page
+    public partial class BanTinTheoDanhMuc : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["login"] = false;
-            Session["username"] = "";
-            Session["user_ID"] = 0;
-            Response.Redirect("index.aspx");
+
         }
     }
 }

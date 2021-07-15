@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\AdminHome.aspx" />
+    <Content Include="BanTinTheoDanhMuc.aspx" />
     <Content Include="ChiTiet.aspx" />
     <Content Include="DangKi.aspx" />
     <Content Include="DangNhap.aspx" />
@@ -69,6 +70,16 @@
   <ItemGroup>
     <Content Include="index.aspx" />
     <Content Include="Logout.aspx" />
+    <Content Include="Profile.aspx" />
+    <Content Include="Search.aspx" />
+    <Content Include="Themes\images\BIDV_901_LLL.gif" />
+    <Content Include="Themes\images\CMC_020108_LLL.gif" />
+    <Content Include="Themes\images\icon_face.png" />
+    <Content Include="Themes\images\LG_SR_1412.gif" />
+    <Content Include="Themes\images\logo.jpg" />
+    <Content Include="Themes\images\save_icon.jpg" />
+    <Content Include="Themes\images\search_icon.jpg" />
+    <Content Include="Themes\images\thegioididong_SL_2403.gif" />
     <Content Include="Themes\style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -79,6 +90,13 @@
     </Compile>
     <Compile Include="Admin\AdminHome.aspx.designer.cs">
       <DependentUpon>AdminHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BanTinTheoDanhMuc.aspx.cs">
+      <DependentUpon>BanTinTheoDanhMuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BanTinTheoDanhMuc.aspx.designer.cs">
+      <DependentUpon>BanTinTheoDanhMuc.aspx</DependentUpon>
     </Compile>
     <Compile Include="ChiTiet.aspx.cs">
       <DependentUpon>ChiTiet.aspx</DependentUpon>
@@ -126,8 +144,23 @@
     <Compile Include="Logout.aspx.designer.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

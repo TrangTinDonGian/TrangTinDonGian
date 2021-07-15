@@ -8,39 +8,76 @@
     <link href="Themes/style.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 136px;
+            height: 200px;
+        }
+        .auto-style2 {
+            width: 136px;
+            height: 201px;
+        }
+        .auto-style3 {
+            width: 136px;
+        }
+        .auto-style4 {
+            width: 100px;
+        }
+        .auto-style5 {
+            width: 100px;
+            height: 181px;
+        }
+        .auto-style6 {
+            width: 132px;
+            height: 200px;
+            margin-right: 0px;
+            margin-top: 0px;
+        }
+    </style>
 </head>
 <body>
     <form id="Home" runat="server">
         <div id="menutop">
+            <div id="menu-up">
+            <div id="logo"> <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/Themes/images/logo.jpg" Width="51px" Height="50px" PostBackUrl="~/index.aspx" CssClass="auto-style4" /></div>
+                <div id="search">             
+                Tìm kiếm <asp:TextBox ID="txtSearch" runat="server" Width="297px"></asp:TextBox><asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Themes/images/search_icon.jpg" Width="23px" OnClick="btnSearch_Click" CssClass="auto-style3" />
+                
+                    <% 
+                        if ((Boolean)Session["login"] == false)
+                        { %>
+                    &nbsp;<a href="DangNhap.aspx">Đăng nhập</a><a href="DangKi.aspx">Đăng kí</a>
+                    <% }
+                        else
+                        {%>
+                    <a>Hi, <asp:Label ID="lblUsername" runat="server" Font-Italic="True"></asp:Label>! </a> 
+                    <a href="Profile.aspx">Profile</a>
+                    <a href="Logout.aspx">Thoát</a>
+                    <%}
+                    %>
+            </div>
+                
+             </div>
             <div id="menu">
                 <ul>
                     <li><a href="index.aspx">Trang Chủ</a></li>
                     <asp:Repeater ID="rpDanhMuc" runat="server" DataSourceID="SqlDataSource1">
                         <ItemTemplate>
-                            <li><a href="#"><%# Eval("title") %></a></li>
+                            <li><a href="BanTinTheoDanhMuc.aspx?id=<%# Eval("category_ID") %>"><%# Eval("title") %></a></li>
                         </ItemTemplate>
                     </asp:Repeater>
 
-                    <% 
-                        if ((Boolean)Session["login"] == false)
-                        { %>
-                    <li><a href="DangNhap.aspx">Đăng nhập</a></li>
-                    <li><a href="DangKi.aspx">Đăng kí</a></li>
-                    <% }
-                        else
-                        {%>
-                    <li><a>Xin chào</a></li>
-                    <li><a href="Logout.aspx">Thoát</a></li>
-                    <%}
-                    %>
                 </ul>
             </div>
+
         </div>
-        <div id="maincontent">
+        <div id="maincontent" class="auto-style5">
             <div id="rightcontent">
-                <h1>Tiêu đề phải</h1>
+                <h1>Quảng cáo</h1>
                 <div id="ndright">
-                    Noi dung ben phai
+                    <img alt="quangcao" class="auto-style1" src="Themes/images/CMC_020108_LLL.gif" /><img alt="quangcao" class="auto-style1" src="Themes/images/BIDV_901_LLL.gif" /><br />
+                    <img alt="quangcao" class="auto-style2" src="Themes/images/thegioididong_SL_2403.gif" /><img alt="" class="auto-style6" src="Themes/images/LG_SR_1412.gif" /><br />
+                    <br />
                 </div>
             </div>
             <div id="content">
@@ -58,7 +95,7 @@
 
             </div>
         </div>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TrangTinTucConnectionString %>" SelectCommand="SELECT [title] FROM [tblCategory]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TrangTinTucConnectionString %>" SelectCommand="SELECT [title], [category_ID] FROM [tblCategory]"></asp:SqlDataSource>
     </form>
 </body>
 </html>
