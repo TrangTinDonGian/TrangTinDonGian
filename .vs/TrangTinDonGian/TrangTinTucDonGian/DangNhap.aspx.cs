@@ -28,18 +28,38 @@ namespace TrangTinTucDonGian
                 {
                     string strSelect = "SELECT * FROM tblUser WHERE username='" + txtUsername.Text + "' AND  password= '" + txtPassword.Text + "'";
                     dt = (new DataProvider()).excuteQuery(strSelect);
-
+                    
                     if (dt.Rows.Count > 0)
                     {
                         //login thanh cong
                         Session["login"] = true;
                         Session["username"] = dt.Rows[0]["username"].ToString();
                         Session["user_ID"] = dt.Rows[0]["user_ID"].ToString();
+
+                        
                         //power = 0 chuyen ve trang AdminHome.aspx
+                        string sqlSelect = "SELECT power FROM tblUser WHERE username = '"+ Session["username"].ToString() + "' ";                       
+                        dt = (new DataProvider()).excuteQuery(sqlSelect);
+                        int power = Convert.ToInt32(dt.Rows[0]["power"].ToString());
                         //if        
-                        Response.Redirect("index.aspx");
-                        //power = 1 chuyen ve trang ModHome.aspx
-                        //power = 2 chuyen ve trang index.aspx
+                        if (power == 0)
+                        {
+                             Response.Redirect("AdminHome.aspx");
+                            //Response.Redirect("index.aspx");
+                        }
+                        else if (power == 1)  
+                        {
+                            //power = 1 chuyen ve trang ModHome.aspx
+                            //Response.Redirect("ModHome.aspx");
+                            Response.Redirect("index.aspx");
+                        }
+                        else
+                        {
+                            //power = 2 chuyen ve trang index.aspx
+                            Response.Redirect("index.aspx");
+                        }
+                        
+                   
                     }
                     else
                     {

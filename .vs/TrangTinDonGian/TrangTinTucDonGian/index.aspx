@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>Tin mới nhất</h1>
     <div id="ndcontent">
-        <asp:Repeater ID="rpNews" runat="server" DataSourceID="SqlDataSource1">
+        <asp:Repeater ID="rpNews" runat="server" DataSourceID="SqlDataSource1" OnItemCommand="rpNews_ItemCommand">
             <ItemTemplate>
                 <ul>
                     <li>

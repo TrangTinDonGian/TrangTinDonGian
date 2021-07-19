@@ -11,13 +11,13 @@
         <asp:TextBox ID="txtPassword" Width="300px" Height="20px" TextMode="Password" runat="server"></asp:TextBox>
         <br />
         <h4>Nhập lại mật khẩu:</h4>
-        <asp:TextBox ID="TextBox1" Width="300px" Height="20px" TextMode="Password" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtCfPassword" Width="300px" Height="20px" TextMode="Password" runat="server"></asp:TextBox>
         <br />
         <br />
-        <asp:Button ID="btnLogin" runat="server" Text="Đăng kí" Height="44px" Width="141px" />
+        <asp:Button ID="btnLogin" runat="server" Text="Đăng kí" Height="44px" Width="141px" OnClick="btnLogin_Click" />
         <br />
         <h4>
-            <asp:Label ID="lblThongBao" runat="server" Text="" ForeColor="Red"></asp:Label>
+            <asp:Label ID="lblThongBao" runat="server" ForeColor="Red"></asp:Label>
         </h4>
     </div>
 

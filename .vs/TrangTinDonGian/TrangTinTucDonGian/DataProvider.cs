@@ -46,6 +46,22 @@ namespace TrangTinTucDonGian
             }
         }
 
+        public DataTable excuteQuery(string str)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                da = new SqlDataAdapter(str, cnn);
+                da.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Excute fail " + ex.Message);
+            }
+            return dt;
+
+        }
+
         //Hàm execute 1 câu lệnh select
         public DataTable executeNonQuery(string strSelect)
         {
@@ -62,21 +78,7 @@ namespace TrangTinTucDonGian
             return dt;
         }
 
-        public DataTable excuteQuery(string str)
-        {
-            DataTable dt = new DataTable();
-            try
-            {
-                da = new SqlDataAdapter(str, cnn);
-                da.Fill(dt);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Excute fail " + ex.Message);
-            }
-            return dt;
-
-        }
+       
         public bool excuteNonQuery(string strSQL)
         {
             try

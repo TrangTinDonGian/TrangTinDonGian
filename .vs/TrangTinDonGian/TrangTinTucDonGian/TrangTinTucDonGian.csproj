@@ -53,11 +53,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Admin\AdminHome.aspx" />
+    <Content Include="AdminHome.aspx" />
     <Content Include="BanTinTheoDanhMuc.aspx" />
     <Content Include="ChiTiet.aspx" />
     <Content Include="DangKi.aspx" />
     <Content Include="DangNhap.aspx" />
+    <Content Include="DoiPassword.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Home.Master" />
     <None Include="Web.Debug.config">
@@ -84,11 +85,11 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\AdminHome.aspx.cs">
+    <Compile Include="AdminHome.aspx.cs">
       <DependentUpon>AdminHome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\AdminHome.aspx.designer.cs">
+    <Compile Include="AdminHome.aspx.designer.cs">
       <DependentUpon>AdminHome.aspx</DependentUpon>
     </Compile>
     <Compile Include="BanTinTheoDanhMuc.aspx.cs">
@@ -120,6 +121,13 @@
       <DependentUpon>DangNhap.aspx</DependentUpon>
     </Compile>
     <Compile Include="DataProvider.cs" />
+    <Compile Include="DoiPassword.aspx.cs">
+      <DependentUpon>DoiPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DoiPassword.aspx.designer.cs">
+      <DependentUpon>DoiPassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -160,7 +168,9 @@
       <DependentUpon>Search.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Admin\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

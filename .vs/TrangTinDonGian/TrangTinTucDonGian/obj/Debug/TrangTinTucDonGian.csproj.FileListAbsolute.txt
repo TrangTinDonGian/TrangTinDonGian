@@ -5,3 +5,17 @@ C:\Users\PhongVuVP\source\repos\TrangTinDonGian\.vs\TrangTinDonGian\TrangTinTucD
 C:\Users\PhongVuVP\source\repos\TrangTinDonGian\.vs\TrangTinDonGian\TrangTinTucDonGian\obj\Debug\TrangTinTucDonGian.csproj.CoreCompileInputs.cache
 C:\Users\PhongVuVP\source\repos\TrangTinDonGian\.vs\TrangTinDonGian\TrangTinTucDonGian\obj\Debug\TrangTinTucDonGian.dll
 C:\Users\PhongVuVP\source\repos\TrangTinDonGian\.vs\TrangTinDonGian\TrangTinTucDonGian\obj\Debug\TrangTinTucDonGian.pdb
+D:\FPT\FPT- 2021 Sum\PRN 292\New folder (3)\.vs\TrangTinDonGian\TrangTinTucDonGian\bin\TrangTinTucDonGian.dll.config
+D:\FPT\FPT- 2021 Sum\PRN 292\New folder (3)\.vs\TrangTinDonGian\TrangTinTucDonGian\bin\TrangTinTucDonGian.dll
+D:\FPT\FPT- 2021 Sum\PRN 292\New folder (3)\.vs\TrangTinDonGian\TrangTinTucDonGian\bin\TrangTinTucDonGian.pdb
+D:\FPT\FPT- 2021 Sum\PRN 292\New folder (3)\.vs\TrangTinDonGian\TrangTinTucDonGian\obj\Debug\TrangTinTucDonGian.csproj.AssemblyReference.cache
+D:\FPT\FPT- 2021 Sum\PRN 292\New folder (3)\.vs\TrangTinDonGian\TrangTinTucDonGian\obj\Debug\TrangTinTucDonGian.csproj.CoreCompileInputs.cache
+D:\FPT\FPT- 2021 Sum\PRN 292\New folder (3)\.vs\TrangTinDonGian\TrangTinTucDonGian\obj\Debug\TrangTinTucDonGian.dll
+D:\FPT\FPT- 2021 Sum\PRN 292\New folder (3)\.vs\TrangTinDonGian\TrangTinTucDonGian\obj\Debug\TrangTinTucDonGian.pdb
+D:\FPT\FPT- 2021 Sum\PRN 292\TrangTinTuc\.vs\TrangTinDonGian\TrangTinTucDonGian\bin\TrangTinTucDonGian.dll.config
+D:\FPT\FPT- 2021 Sum\PRN 292\TrangTinTuc\.vs\TrangTinDonGian\TrangTinTucDonGian\bin\TrangTinTucDonGian.dll
+D:\FPT\FPT- 2021 Sum\PRN 292\TrangTinTuc\.vs\TrangTinDonGian\TrangTinTucDonGian\bin\TrangTinTucDonGian.pdb
+D:\FPT\FPT- 2021 Sum\PRN 292\TrangTinTuc\.vs\TrangTinDonGian\TrangTinTucDonGian\obj\Debug\TrangTinTucDonGian.csproj.AssemblyReference.cache
+D:\FPT\FPT- 2021 Sum\PRN 292\TrangTinTuc\.vs\TrangTinDonGian\TrangTinTucDonGian\obj\Debug\TrangTinTucDonGian.csproj.CoreCompileInputs.cache
+D:\FPT\FPT- 2021 Sum\PRN 292\TrangTinTuc\.vs\TrangTinDonGian\TrangTinTucDonGian\obj\Debug\TrangTinTucDonGian.dll
+D:\FPT\FPT- 2021 Sum\PRN 292\TrangTinTuc\.vs\TrangTinDonGian\TrangTinTucDonGian\obj\Debug\TrangTinTucDonGian.pdb

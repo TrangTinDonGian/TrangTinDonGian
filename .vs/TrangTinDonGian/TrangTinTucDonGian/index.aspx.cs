@@ -18,5 +18,10 @@ namespace TrangTinTucDonGian
         {
 
         }
+
+        protected void rpNews_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+
+        }
     }
 }
